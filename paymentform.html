@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<title>payment</title>
+<style>
+#wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vw;
+background-color: orange;
+position: center;
+}
+
+.payment{
+display: flex;
+width: 90%;
+height: 90%;
+background-color: white;
+
+}
+
+.payment_bill{
+width: 100%;
+height: 100%;
+background-color: white;
+text-align: center;
+font-size: 150%;
+text-decoration: underline;
+box-shadow: 20px 20px 20px 3px red;
+word-spacing: 5px;
+padding: 12px 20px 12px 40px;
+border: 1px solid #ddd;
+line-height: 1.5;
+}
+
+button{
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  margin: 15px;
+  padding: 15px 32px;
+  font-size: 100%;
+  border-radius: 20px;
+  text-shadow: 1px 1px black;
+}
+button:hover {
+  background-color: #e7e7e7;
+}
+
+  </style>
+<body>
+  <div id="wrapper">
+  <div class="payment">
+
+  <div class="payment_bill">
+
+    <h1><i>Order Details</i></h1>
+    <h2>Item Selected</h2>
+    <img src="ganesh.jfif" width =400px length =650px alt="there should be a pic over here">
+    <form> 
+      <label for="first name">First Name:</label>
+      <input type="text" name="first name" placeholder="firstname  " required>
+
+      <label for="first name">Last Name:</label>
+      <input type="text" name="lastname" placeholder=" lastname " required>
+
+     <div>
+
+        <label for="email">Email Address:</label>
+      <input type="text" name="email" required placeholder="name@example.com">
+
+         </div> 
+    <div>
+      <label for="gender-male">Male</label>
+      <input type="radio" name="gender-choice" value="choice 1">
+
+      <label for="gender-female">Female</label>
+      <input type="radio" name="gender-choice" value="choice 2">
+
+      
+
+    
+    <div >
+        <label for="address">Resedential Adress:</label>     
+        <input type="text" name="address" required> 
+       </div>
+
+    <div >
+        <label for="City">City:</label>     
+        <input type="text" name="City" required> 
+       </div>
+
+       <div >
+        <label for="Country">Country:</label>     
+        <input type="text" name="Country" required> 
+       </div>
+
+    
+    <div >
+       <label for="birth month">Birth Month</label>
+       <select name="month">
+        
+        <option value="0"selected disabled>month</option>
+        <option value="january">january</option>
+        <option value="february">february</option>
+        <option value="march">march</option>
+        <option value="april">april</option>
+        <option value="may">may</option>
+        <option value="june">june</option>
+        <option value="july">july</option>
+        <option value="august">august</option>
+        <option value="september">september</option>
+        <option value="october">october</option>
+        <option value="november">november</option>
+        <option value="december">december</option>
+    </select>
+    
+    
+    <label for="birth date">Birth Date</label>
+    <select name="birth date">
+                              
+    <option value="0" selected disabled>date</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    
+</select>
+
+    <label for="address">Year</label>     
+        <input type="text" name="address" required> 
+      <div >
+        <label for="address">Mode of Payment:</label>    
+        
+        <select name="MODE">
+        <option value="0"selected disabled></option>
+        <option value="january">Credit Card</option>
+        <option value="february">Debit Card</option>
+        <option value="march">GooglePay</option>
+        <option value="april">Cash on Delivery</option>
+       
+    </select>
+       </div>
+    <div>
+          
+          <button type="submit">Proceed</button>
+                            
+</div>
+
+
+
+    </form>
+  </div>
+  </div>
+  </body>
+</html>
+  </head>
+</html>

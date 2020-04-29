@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<title>accessories</title>
+<style>
+	body{
+
+	background-image: url("background.jpg");
+	background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: black;
+
+}
+	img {
+  border: 3px solid black;
+  margin: 10px;
+  }
+  table{
+			border: 1px solid black;
+		}
+
+		td{
+			border: 1px solid black;
+		}
+#myInput {
+  
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  margin: 15px;
+  padding: 15px 32px;
+  font-size: 100%;
+  border-radius: 20px;
+  text-shadow: 1px 1px black;
+}
+button:hover {
+  background-color: #e7e7e7;
+}
+</style>
+<input type="text" name="" id="myInput" onkeyup="searchFun()" placeholder="Search by categories.." onkeyup="searchFun()">
+<table id="myTable">
+<tr class="header">
+<thead>
+	
+	
+	<th>CATEGORY</th>
+	<th>ITEM</th>
+	<th>DESCRIPTION</th>
+	<th>COST</th>
+	<th>TAKEAWAY</th>
+</thead>
+</tr>
+
+<tr>
+	
+	<td>SINGLE NECKLACE SET</td>
+	<td><img src="necklace.png" width =300px length =500px alt="there should be a pic over here"></td>
+	<td>Necklace set specially designed for marriage occasions</td>
+    <td>MRP= 800/-</td>
+   <td><a href="paymentform7.html"><button type="submit">Order Now</button></a><br>
+    	<button>Add to whishlist</button>
+</td>
+</tr>
+
+<tr>
+
+<td>NECKLACE SET</td>
+<td><img src="necklace2.jpg" width =300px length =600px alt="there should be a pic over here"></td>
+<td>BROAD GOLD AND MOTI JEWELLERY DESIGNSE IN ANTIQUE NECKLAC</td>
+<td>MRP= 1200/-</td>
+<td><a href="paymentform8.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+<tr>
+
+<td>EAR RING SET</td>
+<td><img src="necklace3.jpg" width =300px length =700px alt="there should be a pic over here"></td>
+<td>Beutiful ring set </td>
+<td>MRP= 450/-</td>
+<td><a href="paymentform9.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+
+
+
+	</table>
+
+<script>
+const searchFun = () =>{
+	
+
+var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+	  }
+  
+</script>
+</body>
+	</head>
+</html>

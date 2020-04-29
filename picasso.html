@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<title>picasso</title>
+<style>
+	body{
+
+	background-image: url("background.jpg");
+	background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: black;
+   
+}
+	img {
+  border: 3px solid black;
+  margin: 10px;
+  }
+  table{
+			border: 1px solid black;
+		}
+
+		td{
+			border: 1px solid black;
+		}
+#myInput {
+  background-image: url("search1.jpg");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  margin: 15px;
+  padding: 15px 32px;
+  font-size: 100%;
+  border-radius: 20px;
+  text-shadow: 1px 1px black;
+  
+}
+button:hover {
+  background-color: #e7e7e7;
+}
+</style>
+<input type="text" name="" id="myInput" onkeyup="searchFun()" placeholder="Search by category.." onkeyup="searchFun()">
+<table id="myTable">
+	<tr class="header">
+<thead>
+	
+	
+	<th>CATEGORY</th>
+	<th>ITEM</th>
+	<th>DESCRIPTION</th>
+	<th>COST</th>
+	<th>TAKEAWAY</th>
+</thead>
+</tr>
+
+
+<tr>
+	
+	<td>OIL PAINTING</td>
+	<td><img src="ganesh.jfif" width =300px length =500px alt="there should be a pic over here"></td>
+	<td>ARTIST:SMITA SAHA <br>
+       Drawn on 30 X 18 mm canvas,Made of oil paints</td>
+    <td>MRP= 8000/-</td>
+    <td><a href="paymentform.html"><button type="submit">Order Now</button></a><br>
+    	<button>Add to whishlist</button>
+</td>
+</tr>
+
+<tr>
+<td>WATER COLOUR</td>
+<td><img src="painting.jpg" width =300px length =500px alt="there should be a pic over here"></td>
+<td>ARTIST:SULOGNA<br>
+	Drawn on 30 X 18 mm canvas,Made of oil paints</td>
+<td>MRP= 4500/-</td>
+<td><a href="paymentform2.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+<tr>
+<td>ABSTRACT POTRAIT</td>
+<td><img src="vertical.jpg" width =300px length =700px alt="there should be a pic over here"></td>
+<td>ARTIST:XYZ<br>
+	Drawn on 30 X 18 mm canvas,Made of oil paints</td>
+<td>MRP= 10,450/-</td>
+<td><a href="paymentform3.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+
+
+
+	</table>
+
+<script>
+const searchFun = () =>{
+	
+
+var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+	  }
+  
+</script>
+
+</body>
+	</head>
+</html>

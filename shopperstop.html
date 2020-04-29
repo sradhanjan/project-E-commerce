@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<title>shopperstop</title>
+<style>
+	body{
+
+	background-image: url("background.jpg");
+	background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: black;
+
+}
+	img {
+  border: 3px solid black;
+  margin: 10px;
+  }
+  table{
+			border: 1px solid black;
+		}
+
+		td{
+			border: 1px solid black;
+		}
+#myInput {
+  
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  margin: 15px;
+  padding: 15px 32px;
+  font-size: 100%;
+  border-radius: 20px;
+  
+}
+button:hover {
+  background-color: #e7e7e7;
+}
+</style>
+<input type="text" name="" id="myInput" onkeyup="searchFun()" placeholder="Search by categories.." onkeyup="searchFun()">
+<table id="myTable">
+<tr class="header">
+<thead>
+	
+	
+	<th>CATEGORY</th>
+	<th>ITEM</th>
+	<th>DESCRIPTION</th>
+	<th>COST</th>
+	<th>TAKEAWAY</th>
+</thead>
+</tr>
+
+<tr>
+	
+	<td>SAREE</td>
+	<td><img src="shop1.jpg" width =300px length =500px alt="there should be a pic over here"></td>
+	<td>Our range of Party Wear Fabulous with Charm Designer Sarees are widely appreciated by our customers which are situated all round the nation. This range of Party Wear Designer Sarees are manufactured by using high quality material and are available in various colours and Designs.
+Features:
+- Soft and comfortable
+- Color fastness
+- Elaborate designs</td>
+    <td>MRP= 2599/-</td>
+    <td><a href="paymentform10.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+<tr>
+
+<td>KURTA FOR MEN</td>
+<td><img src="shop2.jpg" width =300px length =500px alt="there should be a pic over here"></td>
+<td>Blue dupion silk kurta pyjama is stylised heavy embellished embroidered work .Decorative embroidered design all over the kurta pyjama adds to the look.This kurta pyjama is an ultimate adornment for the moment you wish to treasure forever.Comes with matching style bottom.
+</td>
+<td>MRP= 1529/-</td>
+<td><a href="paymentform11.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+<tr>
+
+<td>SALWAR KAMEEZ</td>
+<td><img src="shop3.jpg" width =300px length =500px alt="there should be a pic over here"></td>
+<td>Navy blue full sleeved straight cut kurti in art silk embellished with all over heavy mirror work. Accompanied by a navy blue shantoon patiala salwar and laced net dupatta. Do Note: All Accessories shown are for styling purpose only. Slight color variation may occur due to photographic reasons. The unstitched kameez can be customised up to size 46 inches.</td>
+<td>MRP= 2239/-</td>
+<td><a href="paymentform12.html"><button type="submit">Order Now</button></a><br>
+	<button>Add to whishlist</button>
+</td>
+</tr>
+
+
+
+
+	</table>
+	<script>
+const searchFun = () =>{
+	
+
+var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+	  }
+  
+</script>
+</body>
+	</head>
+</html>
